@@ -1,0 +1,6 @@
+@Nanna.Example_HostAddress = http://localhost:5241
+
+GET {{Nanna.Example_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
