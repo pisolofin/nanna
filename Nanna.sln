@@ -3,9 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanna.Example", "Nanna.Example\Nanna.Example.csproj", "{2C35CCD6-7237-40E5-9398-1A9C80D0D5CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.Example", "Nanna.Example\Nanna.Example.csproj", "{2C35CCD6-7237-40E5-9398-1A9C80D0D5CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanna.ExampleAOT", "Nanna.ExampleAOT\Nanna.ExampleAOT.csproj", "{E04D3577-B379-4FAF-9598-50295D9F1B78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.ExampleAOT", "Nanna.ExampleAOT\Nanna.ExampleAOT.csproj", "{E04D3577-B379-4FAF-9598-50295D9F1B78}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.Example.Application", "Nanna.Example.Application\Nanna.Example.Application.csproj", "{98698E4B-D898-4146-9C66-8C9963EAE91F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna", "Nanna\Nanna.csproj", "{F7A6A67F-3D00-4160-91DF-5A5280D3457C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Library", "_Library", "{7EECE299-ED8C-42CD-8BFC-05A263BF0930}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{2D842779-889E-4039-BC7E-C88D8483DE9A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.EntityFramework", "Nanna.EntityFramework\Nanna.EntityFramework.csproj", "{F0EF69DB-1EA0-4A75-8E56-C5C433D926EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +31,28 @@ Global
 		{E04D3577-B379-4FAF-9598-50295D9F1B78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E04D3577-B379-4FAF-9598-50295D9F1B78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E04D3577-B379-4FAF-9598-50295D9F1B78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98698E4B-D898-4146-9C66-8C9963EAE91F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98698E4B-D898-4146-9C66-8C9963EAE91F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98698E4B-D898-4146-9C66-8C9963EAE91F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98698E4B-D898-4146-9C66-8C9963EAE91F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7A6A67F-3D00-4160-91DF-5A5280D3457C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7A6A67F-3D00-4160-91DF-5A5280D3457C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7A6A67F-3D00-4160-91DF-5A5280D3457C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7A6A67F-3D00-4160-91DF-5A5280D3457C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0EF69DB-1EA0-4A75-8E56-C5C433D926EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0EF69DB-1EA0-4A75-8E56-C5C433D926EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0EF69DB-1EA0-4A75-8E56-C5C433D926EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0EF69DB-1EA0-4A75-8E56-C5C433D926EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2C35CCD6-7237-40E5-9398-1A9C80D0D5CB} = {2D842779-889E-4039-BC7E-C88D8483DE9A}
+		{E04D3577-B379-4FAF-9598-50295D9F1B78} = {2D842779-889E-4039-BC7E-C88D8483DE9A}
+		{98698E4B-D898-4146-9C66-8C9963EAE91F} = {2D842779-889E-4039-BC7E-C88D8483DE9A}
+		{F7A6A67F-3D00-4160-91DF-5A5280D3457C} = {7EECE299-ED8C-42CD-8BFC-05A263BF0930}
+		{F0EF69DB-1EA0-4A75-8E56-C5C433D926EA} = {7EECE299-ED8C-42CD-8BFC-05A263BF0930}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1184FC15-DF21-4DE6-A5EA-92484EEF16FE}
