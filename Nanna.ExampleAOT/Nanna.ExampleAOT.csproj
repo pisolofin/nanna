@@ -8,4 +8,10 @@
     <PublishAot>true</PublishAot>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Nanna.AspNetCore\Nanna.AspNetCore.csproj" />
+    <ProjectReference Include="..\Nanna.Serilog\Nanna.Serilog.csproj" />
+    <ProjectReference Include="..\Nanna.Swagger\Nanna.Swagger.csproj" />
+  </ItemGroup>
+
 </Project>
