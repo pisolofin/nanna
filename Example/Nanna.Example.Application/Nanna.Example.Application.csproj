@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Nanna.EntityFramework\Nanna.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\Library\Nanna.EntityFramework\Nanna.EntityFramework.csproj" />
   </ItemGroup>
 
 </Project>

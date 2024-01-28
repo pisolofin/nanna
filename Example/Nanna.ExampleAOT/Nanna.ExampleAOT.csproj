@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <PublishAot>true</PublishAot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Library\Nanna.AspNetCore\Nanna.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\Library\Nanna.Serilog\Nanna.Serilog.csproj" />
+    <ProjectReference Include="..\..\Library\Nanna.Swagger\Nanna.Swagger.csproj" />
+    <ProjectReference Include="..\Nanna.Example.Application\Nanna.Example.Application.csproj" />
+  </ItemGroup>
+
+</Project>

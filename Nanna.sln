@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.Example", "Nanna.Example\Nanna.Example.csproj", "{2C35CCD6-7237-40E5-9398-1A9C80D0D5CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.Example", "Example\Nanna.Example\Nanna.Example.csproj", "{2C35CCD6-7237-40E5-9398-1A9C80D0D5CB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.ExampleAOT", "Nanna.ExampleAOT\Nanna.ExampleAOT.csproj", "{E04D3577-B379-4FAF-9598-50295D9F1B78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.ExampleAOT", "Example\Nanna.ExampleAOT\Nanna.ExampleAOT.csproj", "{E04D3577-B379-4FAF-9598-50295D9F1B78}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.Example.Application", "Nanna.Example.Application\Nanna.Example.Application.csproj", "{98698E4B-D898-4146-9C66-8C9963EAE91F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.Example.Application", "Example\Nanna.Example.Application\Nanna.Example.Application.csproj", "{98698E4B-D898-4146-9C66-8C9963EAE91F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna", "Nanna\Nanna.csproj", "{F7A6A67F-3D00-4160-91DF-5A5280D3457C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna", "Library\Nanna\Nanna.csproj", "{F7A6A67F-3D00-4160-91DF-5A5280D3457C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Library", "_Library", "{7EECE299-ED8C-42CD-8BFC-05A263BF0930}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example", "Example", "{2D842779-889E-4039-BC7E-C88D8483DE9A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.EntityFramework", "Nanna.EntityFramework\Nanna.EntityFramework.csproj", "{F0EF69DB-1EA0-4A75-8E56-C5C433D926EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.EntityFramework", "Library\Nanna.EntityFramework\Nanna.EntityFramework.csproj", "{F0EF69DB-1EA0-4A75-8E56-C5C433D926EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanna.Serilog", "Nanna.Serilog\Nanna.Serilog.csproj", "{C9F4B52A-A633-4FB6-9591-8BB1766CFC62}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanna.Serilog", "Library\Nanna.Serilog\Nanna.Serilog.csproj", "{C9F4B52A-A633-4FB6-9591-8BB1766CFC62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanna.AspNetCore", "Nanna.AspNetCore\Nanna.AspNetCore.csproj", "{A547827A-276D-47EB-BAB0-AE6028142643}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanna.AspNetCore", "Library\Nanna.AspNetCore\Nanna.AspNetCore.csproj", "{A547827A-276D-47EB-BAB0-AE6028142643}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanna.Swagger", "Nanna.Swagger\Nanna.Swagger.csproj", "{8A7A1616-5C88-41AD-8CE5-5022EEE53F48}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanna.Swagger", "Library\Nanna.Swagger\Nanna.Swagger.csproj", "{8A7A1616-5C88-41AD-8CE5-5022EEE53F48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
