@@ -7,6 +7,7 @@ using Nanna.AspNetCore.Cors;
 using Nanna.AspNetCore.Exceptions;
 using Nanna.AspNetCore.Localizations;
 using Serilog;
+using Nanna.ExampleAOT.Startup;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
@@ -31,14 +32,14 @@ builder.Services.ConfigureHttpJsonOptions(options =>
     options.SerializerOptions.TypeInfoResolverChain.Insert(0, AppJsonSerializerContext.Default);
 });
 
-// Configure logging, CORS, Swagger, and localization
+// Add logging, CORS, Swagger, and localization
 builder.AddLoggingSerilog();
 builder.AddCors();
 builder.AddSwagger();
 builder.AddLocalization();
 
-
 // Add services to the container.
+builder.Services.AddAppDbContext();
 
 
 // Build the application

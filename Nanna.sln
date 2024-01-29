@@ -26,6 +26,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.AspNetCore", "Library
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.Swagger", "Library\Nanna.Swagger\Nanna.Swagger.csproj", "{8A7A1616-5C88-41AD-8CE5-5022EEE53F48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanna.Example.Migrations", "Example\Nanna.Example.Migrations\Nanna.Example.Migrations.csproj", "{C5F0F3F6-17A9-4273-8B3B-02FEC97F4717}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,10 @@ Global
 		{8A7A1616-5C88-41AD-8CE5-5022EEE53F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A7A1616-5C88-41AD-8CE5-5022EEE53F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A7A1616-5C88-41AD-8CE5-5022EEE53F48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F0F3F6-17A9-4273-8B3B-02FEC97F4717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F0F3F6-17A9-4273-8B3B-02FEC97F4717}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F0F3F6-17A9-4273-8B3B-02FEC97F4717}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F0F3F6-17A9-4273-8B3B-02FEC97F4717}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +83,7 @@ Global
 		{C9F4B52A-A633-4FB6-9591-8BB1766CFC62} = {7EECE299-ED8C-42CD-8BFC-05A263BF0930}
 		{A547827A-276D-47EB-BAB0-AE6028142643} = {7EECE299-ED8C-42CD-8BFC-05A263BF0930}
 		{8A7A1616-5C88-41AD-8CE5-5022EEE53F48} = {7EECE299-ED8C-42CD-8BFC-05A263BF0930}
+		{C5F0F3F6-17A9-4273-8B3B-02FEC97F4717} = {2D842779-889E-4039-BC7E-C88D8483DE9A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1184FC15-DF21-4DE6-A5EA-92484EEF16FE}
