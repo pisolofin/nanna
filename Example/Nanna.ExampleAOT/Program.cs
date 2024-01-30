@@ -1,13 +1,12 @@
-using Microsoft.AspNetCore.Hosting;
-using System.Reflection;
-using System.Text.Json.Serialization;
-using Nanna.Serilog;
-using Nanna.Swagger;
 using Nanna.AspNetCore.Cors;
 using Nanna.AspNetCore.Exceptions;
 using Nanna.AspNetCore.Localizations;
-using Serilog;
+using Nanna.Example.Application.Persistance;
 using Nanna.ExampleAOT.Startup;
+using Nanna.Serilog;
+using Nanna.Swagger;
+using Serilog;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
