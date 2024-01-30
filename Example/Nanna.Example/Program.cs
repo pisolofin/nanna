@@ -1,4 +1,4 @@
-using Nanna.Example.Startup;
+using Nanna.Example.WebAPI.Startup;
 
 var builder = WebApplication.CreateBuilder(args);
 

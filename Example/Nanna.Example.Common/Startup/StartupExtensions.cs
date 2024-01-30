@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Nanna.Example.Application.Persistance;
 
-namespace Nanna.ExampleAOT.Startup;
+namespace Nanna.Example.WebAPI.Startup;
 
 public static class StartupExtensions
 {

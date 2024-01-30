@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Nanna.Example.Application\Nanna.Example.Application.csproj" />
+    <ProjectReference Include="..\Nanna.Example.Common\Nanna.Example.Common.csproj" />
   </ItemGroup>
 
 </Project>

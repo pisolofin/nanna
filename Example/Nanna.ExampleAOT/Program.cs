@@ -2,11 +2,11 @@ using Nanna.AspNetCore.Cors;
 using Nanna.AspNetCore.Exceptions;
 using Nanna.AspNetCore.Localizations;
 using Nanna.Example.Application.Persistance;
-using Nanna.ExampleAOT.Startup;
 using Nanna.Serilog;
 using Nanna.Swagger;
 using Serilog;
 using System.Text.Json.Serialization;
+using Nanna.Example.WebAPI.Startup;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
