@@ -7,6 +7,7 @@ using Nanna.Swagger;
 using Serilog;
 using System.Text.Json.Serialization;
 using Nanna.Example.WebAPI.Startup;
+using Nanna.ExampleAOT.Endpoints;
 
 var builder = WebApplication.CreateSlimBuilder(args);
 
@@ -40,7 +41,6 @@ builder.AddLocalization();
 // Add services to the container.
 builder.Services.AddAppDbContext();
 
-
 // Build the application
 var app = builder.Build();
 
@@ -64,6 +64,8 @@ if (!builder.Environment.IsProduction())
     app.UseSwaggerUi(); // serve Swagger UI
 //    app.UseReDoc(); // serve ReDoc UI
 }
+
+app.UseRoomEndpoints();
 
 var sampleTodos = new Todo[] {
     new(1, "Walk the dog"),

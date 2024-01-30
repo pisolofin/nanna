@@ -16,6 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Library\Nanna.AspNetCore\Nanna.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\Library\Nanna.Serilog\Nanna.Serilog.csproj" />
+    <ProjectReference Include="..\..\Library\Nanna.Swagger\Nanna.Swagger.csproj" />
     <ProjectReference Include="..\Nanna.Example.Application\Nanna.Example.Application.csproj" />
     <ProjectReference Include="..\Nanna.Example.Common\Nanna.Example.Common.csproj" />
   </ItemGroup>
