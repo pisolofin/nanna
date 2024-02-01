@@ -2,7 +2,7 @@
 using Nanna.Infrastructure;
 using System.Reflection;
 
-namespace Nanna.EntityFramework.Persistence;
+namespace Nanna.EntityFramework;
 
 public static class IHasPersistenceExtensions
 {

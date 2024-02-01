@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Nanna.EntityFramework.Persistence;
+namespace Nanna.EntityFramework;
 
 public interface IHasPersistence
 {

@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Nanna.EntityFramework.Persistence;
+namespace Nanna.EntityFramework;
 
 public abstract class AppDbContext<TDbContext> : DbContext where TDbContext : DbContext
 {
-    protected AppDbContext(DbContextOptions<TDbContext> options): base(options) { }
+    protected AppDbContext(DbContextOptions<TDbContext> options) : base(options) { }
 
     /// <inheritdoc/>
     protected override void OnModelCreating(ModelBuilder modelBuilder)

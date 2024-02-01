@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Nanna.EntityFramework.Persistence;
+using Nanna.EntityFramework;
 
 namespace Nanna.Example.Application.Persistance;
 

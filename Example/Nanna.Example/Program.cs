@@ -7,6 +7,8 @@ using Nanna.Swagger;
 using Serilog;
 using System.Text.Json.Serialization;
 using Nanna.Example.Endpoints;
+using Nanna.EntityFramework;
+using Nanna.Example.Application.Persistance;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,7 +33,7 @@ builder.AddSwagger();
 builder.AddLocalization();
 
 // Add services to the container.
-builder.Services.AddAppDbContext();
+builder.Services.AddAppDbContext(typeof(Nanna.Example.ApplicationWeb.Reference).Assembly);
 
 // Build the application
 var app = builder.Build();
@@ -60,7 +62,7 @@ if (!builder.Environment.IsProduction())
 // Configure the HTTP request pipeline.
 app.UseRoomEndpoints();
 
-
+await app.Services.ApplyMigrations<AppDbContext>();
 
 var sampleTodos = new Todo[] {
     new(1, "Walk the dog"),
