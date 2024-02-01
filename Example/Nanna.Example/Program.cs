@@ -61,6 +61,7 @@ if (!builder.Environment.IsProduction())
 
 // Configure the HTTP request pipeline.
 app.UseRoomEndpoints();
+Nanna.Example.ApplicationWeb.Devices.Actions.GetDevices.Configure(app);
 
 await app.Services.ApplyMigrations<AppDbContext>();
 

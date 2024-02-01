@@ -13,8 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Example\Nanna.Example.Application\Nanna.Example.Application.csproj" />
-    <ProjectReference Include="..\Library\Nanna.EntityFramework\Nanna.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\Library\Nanna.EntityFramework\Nanna.EntityFramework.csproj" />
+    <ProjectReference Include="..\Nanna.Example.Application\Nanna.Example.Application.csproj" />
+    <ProjectReference Include="..\..\Library\Nanna.AspNetCore\Nanna.AspNetCore.csproj" />
   </ItemGroup>
 
 </Project>
