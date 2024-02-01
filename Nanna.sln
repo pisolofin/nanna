@@ -30,7 +30,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.Example.Migrations", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nanna.Example.Common", "Example\Nanna.Example.Common\Nanna.Example.Common.csproj", "{4A64A09A-8B2A-4B02-AF61-F9D583CB703F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanna.Example.ApplicationWeb", "Nanna.Example.ApplicationWeb\Nanna.Example.ApplicationWeb.csproj", "{60AC7728-048D-436E-9D67-D1ECEDB71CA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nanna.Example.ApplicationWeb", "Example\Nanna.Example.ApplicationWeb\Nanna.Example.ApplicationWeb.csproj", "{60AC7728-048D-436E-9D67-D1ECEDB71CA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
