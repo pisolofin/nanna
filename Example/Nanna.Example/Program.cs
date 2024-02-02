@@ -9,6 +9,7 @@ using System.Text.Json.Serialization;
 using Nanna.Example.Endpoints;
 using Nanna.EntityFramework;
 using Nanna.Example.Application.Persistance;
+using Nanna.AspNetCore.Actions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -61,7 +62,8 @@ if (!builder.Environment.IsProduction())
 
 // Configure the HTTP request pipeline.
 app.UseRoomEndpoints();
-Nanna.Example.ApplicationWeb.Devices.Actions.GetDevices.Configure(app);
+app.UseActionEndpoints(AppDomain.CurrentDomain.GetAssemblies());
+//Nanna.Example.ApplicationWeb.Devices.Actions.GetDevices.Configure(app);
 
 await app.Services.ApplyMigrations<AppDbContext>();
 

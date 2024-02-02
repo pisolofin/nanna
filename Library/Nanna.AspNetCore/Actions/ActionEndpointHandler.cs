@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 
 namespace Nanna.AspNetCore.Actions;
 
-public interface IActionConfigure
+public interface IActionEnpointConfigure
 {
     public static abstract void Configure(WebApplication app);
-}
-
-internal class ActionEndpointHandler
-{
 }

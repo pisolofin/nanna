@@ -4,16 +4,15 @@ namespace Nanna.Infrastructure;
 
 public static class ReflectionHelper
 {
-    public static void ExecuteStaticInterfaceMethod(this List<Assembly> allAssemblies, Type interfaceType, string methodName, params object[] args)
+    public static void ExecuteStaticInterfaceMethod(this IEnumerable<Assembly> assemblyToScanList, Type interfaceType, string methodName, params object[] args)
     {
-        var types = allAssemblies.SelectMany(k => k.GetTypes()).Where(t => interfaceType.IsAssignableFrom(t) && t != interfaceType);
-
-        foreach (var type in types)
+        var actionEnpointList = assemblyToScanList
+            .SelectMany(assembly => assembly.GetTypes())
+            .Where(type => interfaceType.IsAssignableFrom(type) && !type.IsInterface && !type.IsAbstract)
+        ;
+        foreach (var actionEnpoint in actionEnpointList)
         {
-            var configureMethod = type.GetMethod(methodName, BindingFlags.Public | BindingFlags.Static);
-            if (configureMethod == null)
-                continue;
-            configureMethod.Invoke(null, args);
+            actionEnpoint.GetMethod(methodName, BindingFlags.Public | BindingFlags.Static)?.Invoke(null, args);
         }
     }
 }

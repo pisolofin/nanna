@@ -13,28 +13,13 @@ using Microsoft.AspNetCore.Http;
 
 namespace Nanna.Example.ApplicationWeb.Devices.Actions;
 
-//[HttpGet("charts/inverter/channel-current")]
-public class GetDevices : IActionConfigure
+public class GetDevices : IActionEnpointConfigure
 {
-    public static void Configure_(WebApplication app)
-    {
-        app.MapGet("/devices", async (AppDbContext dbContext) =>
-        {
-            var devices = await dbContext.Set<Device>().ToListAsync();
-            return Results.Ok(devices);
-        })
-        .WithTags("Devices");
-    }
-
     public static void Configure(WebApplication app) => app.MapGet("/devices", async (AppDbContext dbContext) =>
     {
         var devices = await dbContext.Set<Device>().ToListAsync();
         return Results.Ok(devices);
     })
+    .WithName("GetDevicesList")
     .WithTags("Devices");
-
-    public async Task<string> Handle()
-    {
-        return "Hello World";
-    }
 }
