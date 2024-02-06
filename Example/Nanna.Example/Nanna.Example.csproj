@@ -22,6 +22,7 @@
     <ProjectReference Include="..\Nanna.Example.Application\Nanna.Example.Application.csproj" />
     <ProjectReference Include="..\Nanna.Example.Common\Nanna.Example.Common.csproj" />
     <ProjectReference Include="..\Nanna.Example.ApplicationWeb\Nanna.Example.ApplicationWeb.csproj" />
+    <ProjectReference Include="..\..\Library\Nanna.AutoMapper\Nanna.AutoMapper.csproj" />
   </ItemGroup>
 
 </Project>

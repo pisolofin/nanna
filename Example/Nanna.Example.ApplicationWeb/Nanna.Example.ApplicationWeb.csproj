@@ -16,6 +16,7 @@
     <ProjectReference Include="..\..\Library\Nanna.EntityFramework\Nanna.EntityFramework.csproj" />
     <ProjectReference Include="..\Nanna.Example.Application\Nanna.Example.Application.csproj" />
     <ProjectReference Include="..\..\Library\Nanna.AspNetCore\Nanna.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\Library\Nanna.AutoMapper\Nanna.AutoMapper.csproj" />
   </ItemGroup>
 
 </Project>

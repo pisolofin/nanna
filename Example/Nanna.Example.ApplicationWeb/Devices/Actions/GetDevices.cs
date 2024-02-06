@@ -10,14 +10,17 @@ using Nanna.Example.ApplicationWeb.Devices.Entities;
 using Nanna.Example.Application.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
+using AutoMapper.QueryableExtensions;
+using AutoMapper;
+using Nanna.Example.ApplicationWeb.Dtos;
 
 namespace Nanna.Example.ApplicationWeb.Devices.Actions;
 
 public class GetDevices : IActionEnpointConfigure
 {
-    public static void Configure(WebApplication app) => app.MapGet("/devices", async (AppDbContext dbContext) =>
+    public static void Configure(WebApplication app) => app.MapGet("/devices", async (AppDbContext dbContext, IConfigurationProvider autoMapperConfig) =>
     {
-        var devices = await dbContext.Set<Device>().ToListAsync();
+        var devices = await dbContext.Set<Device>().ProjectTo<DeviceResponse>(autoMapperConfig).ToListAsync();
         return Results.Ok(devices);
     })
     .WithName("GetDevicesList")

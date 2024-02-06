@@ -7,7 +7,7 @@ namespace Nanna.EntityFramework;
 public static class IHasPersistenceExtensions
 {
     /// <summary>Add calling configuration method for instances of IHasPersistence</summary>
-    public static ModelBuilder AddIHasPersistenceConfiguration(this ModelBuilder modelBuilder, List<Assembly> assemblyToConfigureList)
+    public static ModelBuilder AddIHasPersistenceConfiguration(this ModelBuilder modelBuilder, IEnumerable<Assembly> assemblyToConfigureList)
     {
         foreach (var assembly in assemblyToConfigureList)
         {
@@ -22,7 +22,7 @@ public static class IHasPersistenceExtensions
     /// <summary>Add calling configuration method for instances of IHasPersistence</summary>
     public static ModelBuilder AddIHasPersistenceConfiguration(this ModelBuilder modelBuilder)
     {
-        var assemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
+        var assemblies = AppDomain.CurrentDomain.GetAssemblies();
         modelBuilder.AddIHasPersistenceConfiguration(assemblies);
 
         return modelBuilder;

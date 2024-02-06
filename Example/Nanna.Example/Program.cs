@@ -10,6 +10,7 @@ using Nanna.Example.Endpoints;
 using Nanna.EntityFramework;
 using Nanna.Example.Application.Persistance;
 using Nanna.AspNetCore.Actions;
+using Nanna.AutoMapper ;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +33,7 @@ builder.AddLoggingSerilog();
 builder.AddCors();
 builder.AddSwagger();
 builder.AddLocalization();
+builder.Services.AddAutoMapperAndConfig([typeof(Nanna.Example.ApplicationWeb.Reference).Assembly]);
 
 // Add services to the container.
 builder.Services.AddAppDbContext(typeof(Nanna.Example.ApplicationWeb.Reference).Assembly);
