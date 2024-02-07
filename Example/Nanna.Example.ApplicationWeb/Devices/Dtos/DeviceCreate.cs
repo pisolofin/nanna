@@ -2,8 +2,10 @@
 
 namespace Nanna.Example.ApplicationWeb.Dtos;
 
-public class DeviceCreate
-{
-    public string Name { get; set; }
-    public DeviceType DeviceType { get; set; }
-}
+//public class DeviceCreate
+//{
+//    public string Name { get; set; }
+//    public DeviceType DeviceType { get; set; }
+//}
+
+public record DeviceCreate(string Name, DeviceType DeviceType);
