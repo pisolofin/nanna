@@ -12,9 +12,14 @@ public enum DeviceType
     Other = 7
 }
 
-public partial class Device
+//public partial class Device
+//{
+//    public int Id { get; set; }
+//    public string Name { get; set; } = String.Empty;
+//    public DeviceType DeviceType { get; set; }
+//}
+
+public partial record Device(string Name, DeviceType DeviceType)
 {
-    public int Id { get; set; }
-    public string Name { get; set; } = String.Empty;
-    public DeviceType DeviceType { get; set; }
-}
+    public int Id { get; init; }
+};

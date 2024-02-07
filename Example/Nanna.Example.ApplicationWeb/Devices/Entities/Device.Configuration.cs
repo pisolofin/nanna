@@ -3,7 +3,7 @@ using Nanna.EntityFramework;
 
 namespace Nanna.Example.ApplicationWeb.Devices.Entities;
 
-public partial class Device : IHasPersistence
+public partial record Device : IHasPersistence
 {
     public static void ConfigurePersistence(ModelBuilder modelBuilder)
     {
