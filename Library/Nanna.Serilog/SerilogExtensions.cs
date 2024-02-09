@@ -6,7 +6,7 @@ namespace Nanna.Serilog;
 
 public static class SerilogExtensions
 {
-    public static WebApplicationBuilder AddLoggingSerilog(this WebApplicationBuilder builder)
+    public static WebApplicationBuilder AddNSerilog(this WebApplicationBuilder builder)
     {
         // TODO: IsIntegrationTesting
 
@@ -22,7 +22,7 @@ public static class SerilogExtensions
         return builder;
     }
 
-    public static WebApplication UseLogEnrichment(this WebApplication app)
+    public static WebApplication _UseNLogEnrichment(this WebApplication app)
     {
         app.UseMiddleware<LogEnrichmentMiddleware>();
 

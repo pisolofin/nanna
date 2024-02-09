@@ -6,7 +6,7 @@ namespace Nanna.AutoMapper;
 
 public static class AutoMapperExtensions
 {
-    public static IServiceCollection AddAutoMapperAndConfig(this IServiceCollection services, IEnumerable<Assembly> assemblyToConfigureList)
+    public static IServiceCollection AddNAutoMapper(this IServiceCollection services, IEnumerable<Assembly> assemblyToConfigureList)
     {
         services.AddAutoMapper(
             configuration =>
@@ -19,8 +19,8 @@ public static class AutoMapperExtensions
         return services;
     }
 
-    public static IServiceCollection AddAutoMapperAndConfig(this IServiceCollection services)
+    public static IServiceCollection AddNAutoMapper(this IServiceCollection services)
     {
-        return AddAutoMapperAndConfig(services, AppDomain.CurrentDomain.GetAssemblies());
+        return AddNAutoMapper(services, AppDomain.CurrentDomain.GetAssemblies());
     }
 }

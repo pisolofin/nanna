@@ -7,7 +7,7 @@ namespace Nanna.AspNetCore.Cors;
 
 public static class CorsExtensions
 {
-    public static WebApplicationBuilder AddCors(this WebApplicationBuilder builder)
+    public static WebApplicationBuilder AddNCors(this WebApplicationBuilder builder)
     {
         // if (!isRunningInAzureWebApp && !env.IsIntegrationTesting())
         var corsOptions = builder.Configuration.GetSection("CORS").Get<CorsOptions>();

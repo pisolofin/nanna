@@ -16,6 +16,6 @@ public abstract class AppDbContext<TDbContext> : DbContext where TDbContext : Db
     /// <summary>Configure the persistance for entities</summary>
     protected virtual void PersistenceConfiguration(ModelBuilder modelBuilder)
     {
-        modelBuilder.AddIHasPersistenceConfiguration();
+        modelBuilder.AddNPersistenceConfiguration();
     }
 }

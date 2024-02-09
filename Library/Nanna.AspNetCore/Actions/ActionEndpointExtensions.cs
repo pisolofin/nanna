@@ -6,7 +6,7 @@ namespace Nanna.AspNetCore.Actions;
 
 public static class ActionEndpointExtensions
 {
-    public static WebApplication UseActionEndpoints(this WebApplication app, params Assembly[] assemblyToScanList)
+    public static WebApplication UseNActionEndpoints(this WebApplication app, params Assembly[] assemblyToScanList)
     {
         if (assemblyToScanList.Length == 0)
         {

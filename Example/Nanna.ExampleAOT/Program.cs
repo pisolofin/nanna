@@ -33,10 +33,10 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 });
 
 // Add logging, CORS, Swagger, and localization
-builder.AddLoggingSerilog();
-builder.AddCors();
-builder.AddSwagger();
-builder.AddLocalization();
+builder.AddNSerilog();
+builder.AddNCors();
+builder.AddNSwagger();
+builder.AddNLocalization();
 
 // Add services to the container.
 builder.Services.AddAppDbContext();
@@ -48,7 +48,7 @@ var app = builder.Build();
 app.UseExceptionHandler(new ExceptionHandlerOptions { ExceptionHandler = ExceptionHandler.HandleException, AllowStatusCode404Response = true });
 
 // Logger
-app.UseLogEnrichment();
+//app.UseLogEnrichment();
 app.UseSerilogRequestLogging();
 
 // Redirect to HTTPS and configure routing

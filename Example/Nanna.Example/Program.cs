@@ -29,11 +29,11 @@ var builder = WebApplication.CreateBuilder(args);
 // currentDomain.SetData("REGEX_DEFAULT_MATCH_TIMEOUT", TimeSpan.FromSeconds(1));
 
 // Add logging, CORS, Swagger, and localization
-builder.AddLoggingSerilog();
-builder.AddCors();
-builder.AddSwagger();
-builder.AddLocalization();
-builder.Services.AddAutoMapperAndConfig([typeof(Nanna.Example.ApplicationWeb.Reference).Assembly]);
+builder.AddNSerilog();
+builder.AddNCors();
+builder.AddNSwagger();
+builder.AddNLocalization();
+builder.Services.AddNAutoMapper([typeof(Nanna.Example.ApplicationWeb.Reference).Assembly]);
 
 // Add services to the container.
 builder.Services.AddAppDbContext(typeof(Nanna.Example.ApplicationWeb.Reference).Assembly);
@@ -45,7 +45,7 @@ var app = builder.Build();
 app.UseExceptionHandler(new ExceptionHandlerOptions { ExceptionHandler = ExceptionHandler.HandleException, AllowStatusCode404Response = true });
 
 // Logger
-app.UseLogEnrichment();
+//app.UseLogEnrichment();
 app.UseSerilogRequestLogging();
 
 // Redirect to HTTPS and configure routing
@@ -64,7 +64,7 @@ if (!builder.Environment.IsProduction())
 
 // Configure the HTTP request pipeline.
 app.UseRoomEndpoints();
-app.UseActionEndpoints(AppDomain.CurrentDomain.GetAssemblies());
+app.UseNActionEndpoints(AppDomain.CurrentDomain.GetAssemblies());
 //Nanna.Example.ApplicationWeb.Devices.Actions.GetDevices.Configure(app);
 
 await app.Services.ApplyMigrations<AppDbContext>();

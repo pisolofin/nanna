@@ -6,7 +6,7 @@ namespace Nanna.AspNetCore.Localizations;
 
 public static class LocalizationExtensions
 {
-    public static WebApplicationBuilder AddLocalization(this WebApplicationBuilder builder, string supportedCultureCommaList = "it-IT")
+    public static WebApplicationBuilder AddNLocalization(this WebApplicationBuilder builder, string supportedCultureCommaList = "it-IT")
     {
         builder.Services.Configure<RequestLocalizationOptions>(options =>
         {
