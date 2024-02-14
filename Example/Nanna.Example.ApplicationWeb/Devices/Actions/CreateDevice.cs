@@ -12,7 +12,7 @@ public class CreateDevice : IActionEnpointConfigure
 {
     public static void Configure(WebApplication app) => app.MapPost("/devices", async (AppDbContext dbContext, DeviceCreate model) =>
     {
-        var device = new Device(model.Name, model.DeviceType);
+        var device = new Device(model.Name, model.DeviceType, model.ManufactureId);
         dbContext.Set<Device>().Add(device);
         Console.WriteLine(device.Id);
         await dbContext.SaveChangesAsync();

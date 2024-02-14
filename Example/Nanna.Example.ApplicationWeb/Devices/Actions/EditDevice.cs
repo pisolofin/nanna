@@ -10,7 +10,7 @@ namespace Nanna.Example.ApplicationWeb;
 
 public class EditDevice : IActionEnpointConfigure
 {
-    public static void Configure(WebApplication app) => app.MapPut("/devices/{id}", async (AppDbContext dbContext, int id, DeviceCreate model, CancellationToken cancellationToken) =>
+    public static void Configure(WebApplication app) => app.MapPut("/devices/{id}", async (AppDbContext dbContext, int id, DeviceEdit model, CancellationToken cancellationToken) =>
     {
         var device = await dbContext
             .Set<Device>()

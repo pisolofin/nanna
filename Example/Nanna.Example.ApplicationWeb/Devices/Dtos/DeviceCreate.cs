@@ -8,4 +8,4 @@ namespace Nanna.Example.ApplicationWeb.Dtos;
 //    public DeviceType DeviceType { get; set; }
 //}
 
-public record DeviceCreate(string Name, DeviceType DeviceType);
+public record DeviceCreate(string Name, DeviceType DeviceType, int ManufactureId);
