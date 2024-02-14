@@ -19,7 +19,7 @@ public enum DeviceType
 //    public DeviceType DeviceType { get; set; }
 //}
 
-public partial record Device(string Name, DeviceType DeviceType, int manufactureId)
+public partial record Device(string Name, DeviceType DeviceType, int ManufactureId)
 {
     public int Id { get; init; }
 };
