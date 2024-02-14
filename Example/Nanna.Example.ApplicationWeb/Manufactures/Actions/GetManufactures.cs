@@ -14,9 +14,10 @@ public class GetManufactures : IActionEnpointConfigure
 {
     public static void Configure(WebApplication app) => app.MapGet("/manufactures", async (AppDbContext dbContext, IConfigurationProvider autoMapperConfig) =>
     {
-        var manufactureList = await dbContext.Set<Manufacture>().ProjectTo<DeviceResponse>(autoMapperConfig).ToListAsync();
+        var manufactureList = await dbContext.Set<Manufacture>().ProjectTo<ManufactureResponse>(autoMapperConfig).ToListAsync();
         return Results.Ok(manufactureList);
     })
     .WithName("GetManufactureList")
-    .WithTags("Manufactures");
+    .WithTags("Manufactures")
+    .RequireAuthorization();
 }

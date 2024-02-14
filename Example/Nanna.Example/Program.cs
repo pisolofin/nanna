@@ -38,6 +38,13 @@ builder.Services.AddNAutoMapper([typeof(Nanna.Example.ApplicationWeb.Reference).
 // Add services to the container.
 builder.Services.AddAppDbContext(typeof(Nanna.Example.ApplicationWeb.Reference).Assembly);
 
+builder.Services.AddAuthentication().AddJwtBearer(options =>
+{
+    options.Audience = "http://localhost:8090/application/o/nanna/";
+    // options.Audience = "http://localhost:8090/application/o/nanna/.well-known/openid-configuration";
+});
+builder.Services.AddAuthorization();
+
 // Build the application
 var app = builder.Build();
 
