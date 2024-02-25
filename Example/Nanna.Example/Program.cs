@@ -31,7 +31,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add logging, CORS, Swagger, and localization
 builder.AddNSerilog();
 builder.AddNCors();
-builder.AddNSwagger();
+builder.AddNSwagger(options =>
+{
+    options.OperationProcessors.Add(new Nanna.Swagger.OperationProcessor.AllOptionalParametersOperationProcessor());
+});
 builder.AddNLocalization();
 builder.Services.AddNAutoMapper([typeof(Nanna.Example.ApplicationWeb.Reference).Assembly]);
 

@@ -6,12 +6,12 @@ namespace Nanna.Swagger;
 
 public static class SwaggerExtensions
 {
-    public static WebApplicationBuilder AddNSwagger(this WebApplicationBuilder builder, AspNetCoreOpenApiDocumentGeneratorSettings? settings = null)
+    public static WebApplicationBuilder AddNSwagger(this WebApplicationBuilder builder, Action<AspNetCoreOpenApiDocumentGeneratorSettings>? settings = null)
     {
         builder.Services
             .AddOpenApiDocument((openApiSettings) =>
             {
-                openApiSettings = settings ?? openApiSettings;
+                settings?.Invoke(openApiSettings);
             })
             .AddEndpointsApiExplorer();
 
