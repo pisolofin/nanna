@@ -43,8 +43,9 @@ builder.Services.AddAppDbContext(typeof(Nanna.Example.ApplicationWeb.Reference).
 
 builder.Services.AddAuthentication().AddJwtBearer(options =>
 {
-    options.Audience = "http://localhost:8090/application/o/nanna/";
-    // options.Audience = "http://localhost:8090/application/o/nanna/.well-known/openid-configuration";
+    options.MetadataAddress = "http://localhost/application/o/app001/.well-known/openid-configuration";
+    options.RequireHttpsMetadata = false;
+    options.Audience = "client-id-001";
 });
 builder.Services.AddAuthorization();
 
